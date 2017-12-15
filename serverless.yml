@@ -1,0 +1,24 @@
+service: service-template
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: eu-central-1
+  memory: 128m
+  profile: default
+  stage: dev
+
+custom:
+  webpackIncludeModules: true
+
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
