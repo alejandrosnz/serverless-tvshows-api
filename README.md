@@ -1,13 +1,9 @@
-## Serverless template
 
-A Serverless starter project template that uses the Serverless Framework for Node.js, Webpack, Babel and Jest for testing your functions.
+A Serverless Framework for Node.js demo project.
 
 
 
 ## Development
-
-You can develop and test your lambda functions locally in a few different ways.
-
 
 ### Serverless offline
 
@@ -15,15 +11,6 @@ Uses serverless offline to match the API Gateway endpoint/experience:
 
 ```bash
 yarn serve
-```
-
-### Test your functions
-
-Jest is installed as the testrunner. Create your tests
-as `<filename>.test.js` and then run them with:
-
-```bash
-yarn test
 ```
 
 ## Deploy

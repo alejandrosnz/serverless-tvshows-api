@@ -1,5 +1,5 @@
 {
-  "name": "serverless-template",
+  "name": "serverless-tvshows",
   "version": "1.0.0",
   "main": "src/handler.js",
   "license": "MIT",
@@ -12,9 +12,7 @@
     "lint": "eslint ./src",
     "precommit": "lint-staged",
     "serve": "serverless offline start",
-    "tail:hello": "serverless logs --function hello --tail",
-    "test": "jest --watch",
-    "watch:hello": "serverless invoke local --watch --function hello"
+    "test": "jest --watch"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
