@@ -12,12 +12,40 @@ custom:
   webpackIncludeModules: true
 
 functions:
-  hello:
-    handler: src/handler.hello
+  create:
+    handler: src/handler.create
     events:
       - http:
-          path: hello
+          path: ${self:service}
+          method: post
+
+  list:
+    handler: src/handler.list
+    events:
+      - http:
+          path: ${self:service}
           method: get
+
+  get:
+    handler: src/handler.get
+    events:
+      - http:
+          path: ${self:service}/{id}
+          method: get
+
+  update:
+    handler: src/handler.update
+    events:
+      - http:
+          path: ${self:service}/{id}
+          method: put
+
+  delete:
+    handler: src/handler.delete
+    events:
+      - http:
+          path: ${self:service}/{id}
+          method: delete
 
 plugins:
   - serverless-webpack

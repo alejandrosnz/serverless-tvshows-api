@@ -1,6 +1,6 @@
 import { success } from './utils';
 
-const hello = (event, context, callback) => {
+const update = (event, context, callback) => {
   const response = success({
     message: 'Nice! Your function executed successfully!',
     input: event
@@ -9,4 +9,4 @@ const hello = (event, context, callback) => {
   callback(null, response);
 };
 
-export default hello;
+export default update;
